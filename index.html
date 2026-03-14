@@ -118,8 +118,11 @@
 
             let carbo = Number(document.getElementById("carbocafe").value);
             let glicose = Number(document.getElementById("glicocafe").value);
-            let insulina = (carbo / 6) * ((glicose - 100) / 35);
-
+            let correcao = (glicose - 100) / 35;
+            if (correcao < 0) {
+                correcao = 0;
+            }
+            let insulina = (carbo / 6) + correcao;
             document.getElementById("insulinacafe").innerHTML =
             "Você precisa aplicar aproximadamente " + insulina.toFixed(0) + " unidades de insulina";
 
@@ -129,7 +132,11 @@
 
             let carbo = Number(document.getElementById("carboalmoco").value);
             let glicose = Number(document.getElementById("glicojanta").value);
-            let insulina = (carbo / 10) * ((glicose - 100) / 35);
+            let correcao = (glicose - 100) / 35;
+            if (correcao < 0) {
+                correcao = 0;
+            }
+            let insulina = (carbo / 6) + correcao;
 
             document.getElementById("insulinaalmoco").innerHTML =
             "Você precisa aplicar aproximadamente " + insulina.toFixed(0) + " unidades de insulina";
@@ -140,8 +147,11 @@
 
             let carbo = Number(document.getElementById("carbojanta").value);
             let glicose = Number(document.getElementById("glicojanta").value);
-            let insulina = (carbo / 12) * ((glicose - 100) / 35);
-
+                        let correcao = (glicose - 100) / 35;
+            if (correcao < 0) {
+                correcao = 0;
+            }
+            let insulina = (carbo / 6) + correcao;
             document.getElementById("insulinajanta").innerHTML =
             "Você precisa aplicar aproximadamente " + insulina.toFixed(0) + " unidades de insulina";
 
