@@ -96,7 +96,7 @@
             <h3>Carboidratos:</h3>
             <input type="text" id="carboalmoco">
             <h3>Glicose:</h3>
-            <input type="text" id="gicoalmoco">
+            <input type="text" id="glicoalmoco">
             <h3 id="insulinaalmoco"></h3>
             <button type="button" onclick="calcularalmoco()">Calcule!</button>
         </form>
@@ -124,14 +124,18 @@
             }
             let insulina = (carbo / 6) + correcao;
             document.getElementById("insulinacafe").innerHTML =
+<<<<<<< HEAD
             "Você precisa aplicar aproximadamente " + Math.round(insulina) + " unidades de insulina";
+=======
+            "Você precisa aplicar " + Math.round(insulina) + " unidades de insulina";
+>>>>>>> e4f175a0306794d63bfaf384e03b5602a4b156b4
 
         }  
         
         function calcularalmoco(){
 
             let carbo = Number(document.getElementById("carboalmoco").value);
-            let glicose = Number(document.getElementById("glicojanta").value);
+            let glicose = Number(document.getElementById("glicoalmoco").value);
             let correcao = (glicose - 100) / 35;
             if (correcao < 0) {
                 correcao = 0;
@@ -139,7 +143,11 @@
             let insulina = (carbo / 6) + correcao;
 
             document.getElementById("insulinaalmoco").innerHTML =
+<<<<<<< HEAD
             "Você precisa aplicar aproximadamente " + Math.round(insulina) + " unidades de insulina";
+=======
+            "Você precisa aplicar " + Math.round(insulina) + " unidades de insulina";
+>>>>>>> e4f175a0306794d63bfaf384e03b5602a4b156b4
 
         }   
 
@@ -153,7 +161,11 @@
             }
             let insulina = (carbo / 6) + correcao;
             document.getElementById("insulinajanta").innerHTML =
+<<<<<<< HEAD
             "Você precisa aplicar aproximadamente " + Math.round(insulina) + " unidades de insulina";
+=======
+            "Você precisa aplicar " + Math.round(insulina) + " unidades de insulina";
+>>>>>>> e4f175a0306794d63bfaf384e03b5602a4b156b4
 
         }   
     </script>
